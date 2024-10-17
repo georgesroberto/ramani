@@ -3,6 +3,12 @@ from rest_framework import permissions
 from .models import Employer, Employee, JobListing, JobApplication, Hiring
 from .serializers import EmployerSerializer, EmployeeSerializer, JobListingSerializer, JobApplicationSerializer, HiringSerializer
 from .permissions import IsEmployer, IsEmployee, IsAdmin
+from django.shortcuts import render
+
+
+# Entry Site
+def index(request):
+    return render(request, 'index.html')
 
 
 # Employer Viewsets

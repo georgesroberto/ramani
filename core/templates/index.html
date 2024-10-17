@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramani Bot Backend Documentation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      h2 {
+        color: #4caf50;
+        margin-top: 30px;
+      }
+      section {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background: #f2f2f2;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding: 10px;
+        background: #4caf50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ramani Bot Backend Documentation</h1>
+      <p>Tabiya Hackathon Hosted by Team Logos</p>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        The Ramani Bot is designed to streamline job application processes and
+        enhance employer-employee interactions through a robust API system. This
+        documentation outlines the available APIs, their endpoints, and the data
+        they expect or dispatch.
+      </p>
+
+      <h2>APIs</h2>
+      <h3>Summary of Endpoints</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>HTTP Method</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/employers/</td>
+            <td>GET/POST</td>
+            <td>List or create employers</td>
+          </tr>
+          <tr>
+            <td>/employers/&lt;id&gt;/</td>
+            <td>GET/PUT/DEL</td>
+            <td>Retrieve, update, or delete an employer</td>
+          </tr>
+          <tr>
+            <td>/employees/</td>
+            <td>GET/POST</td>
+            <td>List or create employees</td>
+          </tr>
+          <tr>
+            <td>/employees/&lt;id&gt;/</td>
+            <td>GET/PUT/DEL</td>
+            <td>Retrieve, update, or delete an employee</td>
+          </tr>
+          <tr>
+            <td>/jobs/</td>
+            <td>GET/POST</td>
+            <td>List or create job listings</td>
+          </tr>
+          <tr>
+            <td>/jobs/&lt;id&gt;/</td>
+            <td>GET/PUT/DEL</td>
+            <td>Retrieve, update, or delete a job listing</td>
+          </tr>
+          <tr>
+            <td>/applications/</td>
+            <td>GET/POST</td>
+            <td>List or create job applications</td>
+          </tr>
+          <tr>
+            <td>/applications/&lt;id&gt;/</td>
+            <td>GET/PUT/DEL</td>
+            <td>Retrieve, update, or delete a job application</td>
+          </tr>
+          <tr>
+            <td>/hirings/</td>
+            <td>GET/POST</td>
+            <td>List or create hirings</td>
+          </tr>
+          <tr>
+            <td>/hirings/&lt;id&gt;/</td>
+            <td>GET/PUT/DEL</td>
+            <td>Retrieve, update, or delete a hiring record</td>
+          </tr>
+          <tr>
+            <td>/api/token/</td>
+            <td>POST</td>
+            <td>Obtain JWT token</td>
+          </tr>
+          <tr>
+            <td>/api/token/refresh/</td>
+            <td>POST</td>
+            <td>Refresh JWT token</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Filtering via URL (Optional)</h3>
+      <p>
+        Users can filter the data directly from the browser with query
+        parameters. For example:
+      </p>
+      <p>
+        <code>/jobs/?title=Developer&job_type=full-time</code>: Returns jobs
+        filtered by title and job type.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2024 Team Logos - Tabiya Hackathon</p>
+    </footer>
+  </body>
+</html>
